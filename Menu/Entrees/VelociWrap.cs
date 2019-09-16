@@ -6,13 +6,32 @@ namespace DinoDiner.Menu.Entrees
 {
     public class VelociWrap
     {
+        /// <summary>
+        /// Gets or sets the price.
+        /// </summary>
+        /// <value>The price.</value>
         public double Price { get; set; }
+        /// <summary>
+        /// Gets or sets the calories.
+        /// </summary>
+        /// <value>The calories.</value>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// Determines if dressing should be used
+        /// </summary>
         private bool dressing;
+        /// <summary>
+        /// determines if the lettuce should be used
+        /// </summary>
         private bool lettuce;
+        /// <summary>
+        /// determines if cheese should be used
+        /// </summary>
         private bool cheese;
-
+        /// <summary>
+        /// Gets the ingredients.
+        /// </summary>
+        /// <value>The ingredients.</value>
         public List<string> Ingredients
         {
             get
@@ -27,6 +46,9 @@ namespace DinoDiner.Menu.Entrees
                 return ing;
             }
         }
+        /// <summary>
+        /// Initializes a new instance of the VelociWrap class.
+        /// </summary>
         public VelociWrap()
         {
             Price = 6.86;
@@ -35,15 +57,23 @@ namespace DinoDiner.Menu.Entrees
             lettuce = true;
             cheese = true;
         }
-
+        /// <summary>
+        /// Holds the dressing.
+        /// </summary>
         public void HoldDressing()
         {
             dressing = false;
         }
+        /// <summary>
+        /// Holds the lettuce.
+        /// </summary>
         public void HoldLettuce()
         {
             lettuce = false;
         }
+        /// <summary>
+        /// Holds the cheese.
+        /// </summary>
         public void HoldCheese()
         {
             cheese = false;

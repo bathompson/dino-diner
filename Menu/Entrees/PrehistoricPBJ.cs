@@ -2,14 +2,33 @@
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// defines a Prehistoric pbj.
+    /// </summary>
     public class PrehistoricPBJ
     {
+        /// <summary>
+        /// Determines if peanut butter should be used
+        /// </summary>
         private bool peanutButter = true;
+        /// <summary>
+        /// Determines if jelly should be used
+        /// </summary>
         private bool jelly = true;
-
+        /// <summary>
+        /// Gets or sets the price.
+        /// </summary>
+        /// <value>The price.</value>
         public double Price { get; set; }
+        /// <summary>
+        /// Gets or sets the calories.
+        /// </summary>
+        /// <value>The calories.</value>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// Gets the list of ingredients.
+        /// </summary>
+        /// <value>The ingredients.</value>
         public List<string> Ingredients
         {
             get
@@ -20,18 +39,24 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// Initializes a new instance of the Prehistoric PBJ class.
+        /// </summary>
         public PrehistoricPBJ()
         {
             this.Price = 6.52;
             this.Calories = 483;
         }
-
+        /// <summary>
+        /// Holds the peanut butter.
+        /// </summary>
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
         }
-
+        /// <summary>
+        /// Holds the jelly.
+        /// </summary>
         public void HoldJelly()
         {
             this.jelly = false;

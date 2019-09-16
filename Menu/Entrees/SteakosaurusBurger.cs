@@ -4,16 +4,41 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Defines Steakosaurus burger.
+    /// </summary>
     public class SteakosaurusBurger
     {
+        /// <summary>
+        /// Gets or sets the price.
+        /// </summary>
+        /// <value>The price.</value>
         public double Price { get; set; }
+        /// <summary>
+        /// Gets or sets the calories.
+        /// </summary>
+        /// <value>The calories.</value>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// Determines if a bun should be used
+        /// </summary>
         private bool bun;
+        /// <summary>
+        /// Determines if a pickle should be used
+        /// </summary>
         private bool pickle;
+        /// <summary>
+        /// Determines if ketchup should be used
+        /// </summary>
         private bool ketchup;
+        /// <summary>
+        /// determines if mustard should be used
+        /// </summary>
         private bool mustard;
-
+        /// <summary>
+        /// Gets the list of ingredients.
+        /// </summary>
+        /// <value>The ingredients.</value>
         public List<string> Ingredients
         {
             get
@@ -30,7 +55,9 @@ namespace DinoDiner.Menu.Entrees
                 return ingredient;
             }
         }
-
+        /// <summary>
+        /// Initializes a new instance of the SteakosaurusBurger class.
+        /// </summary>
         public SteakosaurusBurger()
         {
             bun = true;
@@ -40,19 +67,30 @@ namespace DinoDiner.Menu.Entrees
             Price = 5.15;
             Calories = 621;
         }
-
+        /// <summary>
+        /// Holds the bun.
+        /// </summary>
         public void HoldBun()
         {
             bun = false;
         }
+        /// <summary>
+        /// Holds the pickle.
+        /// </summary>
         public void HoldPickle()
         {
             pickle = false;
         }
+        /// <summary>
+        /// Holds the ketchup.
+        /// </summary>
         public void HoldKetchup()
         {
             ketchup = false;
         }
+        /// <summary>
+        /// Holds the mustard.
+        /// </summary>
         public void HoldMustard()
         {
             mustard = false;
