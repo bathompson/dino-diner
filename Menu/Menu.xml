@@ -9,18 +9,6 @@
             Defines a brontowurst object.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
-        </member>
         <member name="F:DinoDiner.Menu.Entrees.Brontowurst.bun">
             <summary>
             Boolean to determine if a bun should be used
@@ -67,18 +55,6 @@
             Defines a dinonugget object.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
-        </member>
         <member name="F:DinoDiner.Menu.Entrees.DinoNuggets.numOfNuggets">
             <summary>
             The number of nuggets.
@@ -100,6 +76,29 @@
             Adds a nugget.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.Entree">
+            <summary>
+            Abstract class to define an Entree
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+            <summary>
+            Gets or sets the price.
+            </summary>
+            <value>The price.</value>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+            <summary>
+            Gets or sets the calories.
+            </summary>
+            <value>The calories.</value>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+            <summary>
+            Gets the ingredients.
+            </summary>
+            <value>The ingredients.</value>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             defines a Prehistoric pbj.
@@ -114,18 +113,6 @@
             <summary>
             Determines if jelly should be used
             </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
             <summary>
@@ -153,18 +140,6 @@
             defines Pterodactyl wings.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
             <summary>
             Gets the list of ingredients.
@@ -180,18 +155,6 @@
             <summary>
             Defines Steakosaurus burger.
             </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.bun">
             <summary>
@@ -248,18 +211,6 @@
             <summary>
             Defines the TRex King Burger object
             </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.bun">
             <summary>
@@ -352,18 +303,6 @@
             Holds the mayo.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
-            <summary>
-            Gets or sets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
-            <summary>
-            Gets or sets the calories.
-            </summary>
-            <value>The calories.</value>
-        </member>
         <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
             <summary>
             Determines if dressing should be used
@@ -405,6 +344,92 @@
             Holds the cheese.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+            <summary>
+            Class to define the side Fryceritops
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Fryceritops.size">
+            <summary>
+            The size.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+            <summary>
+            Gets or sets the size. Also changes Price and Calories accordingly.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
+            <summary>
+            Gets the ingredients.
+            </summary>
+            <value>The ingredients.</value>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DinoDiner.Menu.Sides.Fryceritops"/> class.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MeteorMacAndCheese.size">
+            <summary>
+            The size.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+            <summary>
+            Gets or sets the size. Also adjusts the price and calories accordingly.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DinoDiner.Menu.Sides.MeteorMacAndCheese"/> class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
+            <summary>
+            Gets the ingredients.
+            </summary>
+            <value>The ingredients.</value>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
+            <summary>
+            Mezzorella sticks.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MezzorellaSticks.size">
+            <summary>
+            The size.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DinoDiner.Menu.Sides.MezzorellaSticks"/> class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Ingredients">
+            <summary>
+            Gets the ingredients.
+            </summary>
+            <value>The ingredients.</value>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
+            <summary>
+            Gets or sets the size. Adjusts price and calories accordingly.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Size">
+            <summary>
+            Enum to determine size.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Side">
+            <summary>
+            Abstract class to define a side
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.Side.Price">
             <summary>
             Gets and sets the price
@@ -424,6 +449,33 @@
             <summary>
             Gets or sets the size
             </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+            <summary>
+            Triceritots.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Triceritots.size">
+            <summary>
+            The size.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DinoDiner.Menu.Sides.Triceritots"/> class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">
+            <summary>
+            Gets the ingredients.
+            </summary>
+            <value>The ingredients.</value>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
         </member>
     </members>
 </doc>
