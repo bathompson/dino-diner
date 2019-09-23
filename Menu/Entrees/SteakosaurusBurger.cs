@@ -7,18 +7,8 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Defines Steakosaurus burger.
     /// </summary>
-    public class SteakosaurusBurger
+    public class SteakosaurusBurger:Entree
     {
-        /// <summary>
-        /// Gets or sets the price.
-        /// </summary>
-        /// <value>The price.</value>
-        public double Price { get; set; }
-        /// <summary>
-        /// Gets or sets the calories.
-        /// </summary>
-        /// <value>The calories.</value>
-        public uint Calories { get; set; }
         /// <summary>
         /// Determines if a bun should be used
         /// </summary>
@@ -39,7 +29,7 @@ namespace DinoDiner.Menu.Entrees
         /// Gets the list of ingredients.
         /// </summary>
         /// <value>The ingredients.</value>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

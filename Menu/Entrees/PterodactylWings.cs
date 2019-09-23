@@ -8,23 +8,13 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// defines Pterodactyl wings.
     /// </summary>
-    public class PterodactylWings
+    public class PterodactylWings:Entree
     {
-        /// <summary>
-        /// Gets or sets the price.
-        /// </summary>
-        /// <value>The price.</value>
-        public double Price { get; set; }
-        /// <summary>
-        /// Gets or sets the calories.
-        /// </summary>
-        /// <value>The calories.</value>
-        public uint Calories { get; set; }
         /// <summary>
         /// Gets the list of ingredients.
         /// </summary>
         /// <value>The ingredients.</value>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

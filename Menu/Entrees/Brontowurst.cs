@@ -7,18 +7,8 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Defines a brontowurst object.
     /// </summary>
-    public class Brontowurst
+    public class Brontowurst:Entree
     {
-        /// <summary>
-        /// Gets or sets the price.
-        /// </summary>
-        /// <value>The price.</value>
-        public double Price { get; set; }
-        /// <summary>
-        /// Gets or sets the calories.
-        /// </summary>
-        /// <value>The calories.</value>
-        public uint Calories { get; set; }
         /// <summary>
         /// Boolean to determine if a bun should be used
         /// </summary>
@@ -35,7 +25,7 @@ namespace DinoDiner.Menu.Entrees
         /// Gets the ingredients.
         /// </summary>
         /// <value>The list of ingredients.</value>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

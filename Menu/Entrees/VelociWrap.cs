@@ -4,18 +4,8 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class VelociWrap
+    public class VelociWrap:Entree
     {
-        /// <summary>
-        /// Gets or sets the price.
-        /// </summary>
-        /// <value>The price.</value>
-        public double Price { get; set; }
-        /// <summary>
-        /// Gets or sets the calories.
-        /// </summary>
-        /// <value>The calories.</value>
-        public uint Calories { get; set; }
         /// <summary>
         /// Determines if dressing should be used
         /// </summary>
@@ -32,7 +22,7 @@ namespace DinoDiner.Menu.Entrees
         /// Gets the ingredients.
         /// </summary>
         /// <value>The ingredients.</value>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

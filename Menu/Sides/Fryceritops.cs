@@ -4,10 +4,20 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// Class to define the side Fryceritops
+    /// </summary>
     public class Fryceritops : Side
     {
+        /// <summary>
+        /// The size.
+        /// </summary>
         private Size size;
-       public override Size Size
+        /// <summary>
+        /// Gets or sets the size. Also changes Price and Calories accordingly.
+        /// </summary>
+        /// <value>The size.</value>
+        public override Size Size
         {
             get
             {
@@ -33,14 +43,20 @@ namespace DinoDiner.Menu.Sides
                 }
             }
         }
-
-        public List<string> Ingredients
+        /// <summary>
+        /// Gets the ingredients.
+        /// </summary>
+        /// <value>The ingredients.</value>
+        public override List<string> Ingredients
         {
             get
             {
                 return new List<string> { "Potato", "Salt", "Vegtable Oil" };
             }
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:DinoDiner.Menu.Sides.Fryceritops"/> class.
+        /// </summary>
         public Fryceritops()
         {
             Calories = 222;
