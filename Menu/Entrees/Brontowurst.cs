@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines a brontowurst object.
@@ -68,6 +67,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldOnion()
         {
             onions = false;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Brontowurst"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Brontowurst"/>.</returns>
+        public override string ToString()
+        {
+            return "Brontowurst";
         }
     }
 }

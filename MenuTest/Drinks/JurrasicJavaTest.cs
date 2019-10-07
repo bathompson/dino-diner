@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 using Xunit;
 namespace MenuTest.Drinks
 {
@@ -9,7 +9,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void CheckCorrectDefaults()
         {
-            JurrasicJava j = new JurrasicJava();
+            JurassicJava j = new JurassicJava();
             Assert.Equal<double>(j.Price, 0.59);
             Assert.Equal<uint>(j.Calories, 2);
             Assert.Equal<Size>(j.Size, Size.Small);
@@ -20,7 +20,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void CheckForChangedDefaults()
         {
-            JurrasicJava j = new JurrasicJava();
+            JurassicJava j = new JurassicJava();
             j.Size = Size.Large;
             Assert.Equal<double>(j.Price, 1.49);
             Assert.Equal<uint>(j.Calories, 8);
@@ -34,21 +34,21 @@ namespace MenuTest.Drinks
         [Fact]
         public void CheckForHeldIce()
         {
-            JurrasicJava j = new JurrasicJava();
+            JurassicJava j = new JurassicJava();
             j.AddIce();
             Assert.True(j.Ice);
         }
         [Fact]
         public void CheckCream()
         {
-            JurrasicJava j = new JurrasicJava();
+            JurassicJava j = new JurassicJava();
             j.LeaveRoomForCream();
             Assert.True(j.RoomForCream);
         }
         [Fact]
         public void CheckIngredients()
         {
-            JurrasicJava j = new JurrasicJava();
+            JurassicJava j = new JurassicJava();
             Assert.Equal<List<string>>(j.Ingredients, new List<string> { "Water", "Coffee" });
         }
     }

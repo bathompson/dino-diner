@@ -18,7 +18,7 @@ namespace MenuTest
         [InlineData(typeof(Triceritots))]
         [InlineData(typeof(MeteorMacAndCheese))]
         [InlineData(typeof(MezzorellaSticks))]
-        [InlineData(typeof(Tyrannotea))]
+        [InlineData(typeof(TyrannoTea))]
         [InlineData(typeof(Sodasaurus))]
         [InlineData(typeof(JurassicJava))]
         [InlineData(typeof(Water))]

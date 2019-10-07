@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     
     /// <summary>
@@ -28,6 +28,14 @@ namespace DinoDiner.Menu.Entrees
         {
             Price = 7.21;
             Calories = 318;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.PterodactylWings"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.PterodactylWings"/>.</returns>
+        public override string ToString()
+        {
+            return "Pterodactyl Wings";
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Class to define the side Fryceritops
@@ -62,6 +62,17 @@ namespace DinoDiner.Menu.Sides
             Calories = 222;
             Price = 0.99;
 
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Fryceritops"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Fryceritops"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            sb.Append("Fryceritops");
+            return sb.ToString();
         }
     }
 }

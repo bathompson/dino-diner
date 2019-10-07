@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines a Water object.
@@ -60,6 +61,17 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             Lemon = true;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Water"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Water"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            sb.Append("Water");
+            return sb.ToString();
         }
     }
 }

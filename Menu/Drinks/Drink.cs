@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// Enum to determine size of a drink.
-    /// </summary>
-    public enum Size
-    {
-        Small,
-        Medium,
-        Large
-    }
     /// <summary>
     /// Abstract Class to define a Drink.
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink:IMenuItem
     {
         /// <summary>
         /// Gets or sets the calories.

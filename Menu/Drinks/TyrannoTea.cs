@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines a Tyranno tea.
@@ -88,6 +89,18 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             Lemon = true;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TyrannoTea"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TyrannoTea"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            if (Sweet) sb.Append("Sweet");
+            sb.Append("Tyrannotea");
+            return sb.ToString();
         }
     }
 }

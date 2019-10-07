@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines the TRex King Burger object
@@ -144,6 +144,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMayo()
         {
             mayo = false;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TRexKingBurger"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TRexKingBurger"/>.</returns>
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
         }
     }
 }

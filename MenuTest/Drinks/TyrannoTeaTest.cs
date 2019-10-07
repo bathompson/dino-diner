@@ -1,5 +1,5 @@
 ﻿using System;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 using Xunit;
 using System.Collections.Generic;
 namespace MenuTest.Drinks

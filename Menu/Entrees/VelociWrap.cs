@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     public class VelociWrap:Entree
     {
@@ -67,6 +67,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldCheese()
         {
             cheese = false;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.VelociWrap"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.VelociWrap"/>.</returns>
+        public override string ToString()
+        {
+            return "Veloci-Wrap";
         }
     }
 }

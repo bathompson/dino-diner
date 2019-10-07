@@ -1,9 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using static DinoDiner.Menu.Drinks.Sodasaurus;
+using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// Sodasarus flavor.
+    /// </summary>
+    public enum SodasaurusFlavor
+    {
+        Cola,
+        Orange,
+        Vanilla,
+        Chocolate,
+        RootBeer,
+        Cherry,
+        Lime
+    }
     /// <summary>
     /// Defines a Sodasaurus Drink.
     /// </summary>
@@ -13,19 +26,7 @@ namespace DinoDiner.Menu.Drinks
         /// The size.
         /// </summary>
         private Size size;
-        /// <summary>
-        /// Sodasarus flavor.
-        /// </summary>
-        public enum SodasarusFlavor
-        {
-            Cola,
-            Orange,
-            Vanilla,
-            Chocolate,
-            RootBeer,
-            Cherry,
-            Lime
-        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:DinoDiner.Menu.Drinks.Sodasaurus"/> class.
         /// </summary>
@@ -50,7 +51,7 @@ namespace DinoDiner.Menu.Drinks
         /// Gets or sets the flavor.
         /// </summary>
         /// <value>The flavor.</value>
-        public SodasarusFlavor Flavor { get; set; }
+        public SodasaurusFlavor Flavor { get; set; }
         /// <summary>
         /// Gets or sets the size.
         /// </summary>
@@ -80,6 +81,21 @@ namespace DinoDiner.Menu.Drinks
                     Calories = 208;
                 }
             }
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Sodasaurus"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Sodasaurus"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            if (Flavor != SodasaurusFlavor.RootBeer)
+                sb.Append(Flavor);
+            else
+                sb.Append("Root Beer");
+            sb.Append("Sodasaurus");
+            return sb.ToString();
         }
     }
 }

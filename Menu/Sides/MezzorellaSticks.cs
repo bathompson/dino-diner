@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Mezzorella sticks.
@@ -60,6 +61,17 @@ namespace DinoDiner.Menu.Sides
                         break;
                 }
             }
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.MezzorellaSticks"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.MezzorellaSticks"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            sb.Append("Mezzorella Sticks");
+            return sb.ToString();
         }
     }
 }

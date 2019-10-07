@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Class to define Jurrassic Java.
     /// </summary>
-    public class JurrasicJava:Drink
+    public class JurassicJava:Drink
     {
         /// <summary>
         /// Defines if there is room for cream
@@ -25,10 +26,10 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Initializes a new instance of the <see cref="T:DinoDiner.Menu.Drinks.JurrasicJava"/> class.
         /// </summary>
-        public JurrasicJava()
+        public JurassicJava()
         {
             ice = false;
-            Size = Size.Small;
+            size = Size.Small;
             Price = 0.59;
             Calories = 2;
             RoomForCream = false;
@@ -88,6 +89,18 @@ namespace DinoDiner.Menu.Drinks
         public void AddIce()
         {
             ice = true;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.JurassicJava"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.JurassicJava"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            if (Decaf) sb.Append("Decaf");
+            sb.Append("Jurassic Java");
+            return sb.ToString();
         }
     }
 }

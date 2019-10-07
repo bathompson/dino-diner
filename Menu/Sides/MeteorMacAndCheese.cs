@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     public class MeteorMacAndCheese:Side
     {
@@ -58,6 +58,17 @@ namespace DinoDiner.Menu.Sides
             {
                 return new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" };
             }
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.MeteorMacAndCheese"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.MeteorMacAndCheese"/>.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Size);
+            sb.Append("Meteor Mac and Cheese");
+            return sb.ToString();
         }
     }
 }

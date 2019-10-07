@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines a dinonugget object.
@@ -46,6 +46,14 @@ namespace DinoDiner.Menu.Entrees
             numOfNuggets++;
             Price += 0.25;
             Calories += 59;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.DinoNuggets"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.DinoNuggets"/>.</returns>
+        public override string ToString()
+        {
+            return "Dino-Nuggets";
         }
     }
 }

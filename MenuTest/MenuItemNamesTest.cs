@@ -170,7 +170,7 @@ namespace MenuTest
         [InlineData(Size.Large, true)]
         public void TyrannoTeaToStringShouldGiveNameForSizeAndSweetness(Size size, bool sweet)
         {
-            Tyrannotea tea = new Tyrannotea();
+            TyrannoTea tea = new TyrannoTea();
             tea.Size = size;
             tea.Sweet = sweet;
             if (sweet) Assert.Equal($"{size} Sweet Tyrannotea", tea.ToString());

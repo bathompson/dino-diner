@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 using System.Collections.Generic;
 namespace MenuTest
 {
@@ -10,20 +10,20 @@ namespace MenuTest
         public void CheckToSetFlavorType()
         {
             Sodasaurus s = new Sodasaurus();
-            s.Flavor = Sodasaurus.SodasarusFlavor.Cola;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Cola);
-            s.Flavor = Sodasaurus.SodasarusFlavor.Orange;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Orange);
-            s.Flavor = Sodasaurus.SodasarusFlavor.Vanilla;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Vanilla);
-            s.Flavor = Sodasaurus.SodasarusFlavor.Chocolate;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Chocolate);
-            s.Flavor = Sodasaurus.SodasarusFlavor.RootBeer;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.RootBeer);
-            s.Flavor = Sodasaurus.SodasarusFlavor.Cherry;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Cherry);
-            s.Flavor = Sodasaurus.SodasarusFlavor.Lime;
-            Assert.Equal<Sodasaurus.SodasarusFlavor>(s.Flavor, Sodasaurus.SodasarusFlavor.Lime); 
+            s.Flavor = SodasaurusFlavor.Cola;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Cola);
+            s.Flavor = SodasaurusFlavor.Orange;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Orange);
+            s.Flavor = SodasaurusFlavor.Vanilla;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Vanilla);
+            s.Flavor = SodasaurusFlavor.Chocolate;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Chocolate);
+            s.Flavor = SodasaurusFlavor.RootBeer;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.RootBeer);
+            s.Flavor = SodasaurusFlavor.Cherry;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Cherry);
+            s.Flavor = SodasaurusFlavor.Lime;
+            Assert.Equal<SodasaurusFlavor>(s.Flavor, SodasaurusFlavor.Lime); 
         }
         [Fact]
         public void CheckCorrectDefaultPriceAndCalories()

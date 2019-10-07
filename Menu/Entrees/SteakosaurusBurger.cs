@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Defines Steakosaurus burger.
@@ -84,6 +84,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMustard()
         {
             mustard = false;
+        }
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.SteakosaurusBurger"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.SteakosaurusBurger"/>.</returns>
+        public override string ToString()
+        {
+            return "Steakosaurus Burger";
         }
     }
 }

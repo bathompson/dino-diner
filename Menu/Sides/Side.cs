@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// Enum to determine size.
-    /// </summary>
-    public enum Size
-    {
-        Small,
-        Medium, 
-        Large
-    }
     /// <summary>
     /// Abstract class to define a side
     /// </summary>
-    public abstract class Side
-    {
+    public abstract class Side:IMenuItem
+    { 
         /// <summary>
         /// Gets and sets the price
         /// </summary>

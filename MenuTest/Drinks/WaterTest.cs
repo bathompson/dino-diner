@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 using System.Collections.Generic;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 namespace MenuTest.Drinks
 {
     public class WaterTest
