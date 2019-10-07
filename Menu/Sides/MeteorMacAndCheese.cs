@@ -67,7 +67,7 @@ namespace DinoDiner.Menu
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(Size);
-            sb.Append("Meteor Mac and Cheese");
+            sb.Append(" Meteor Mac and Cheese");
             return sb.ToString();
         }
     }

@@ -70,7 +70,7 @@ namespace DinoDiner.Menu
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(Size);
-            sb.Append("Mezzorella Sticks");
+            sb.Append(" Mezzorella Sticks");
             return sb.ToString();
         }
     }

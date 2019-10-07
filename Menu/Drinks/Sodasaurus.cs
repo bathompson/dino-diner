@@ -89,12 +89,12 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Size);
-            if (Flavor != SodasaurusFlavor.RootBeer)
+            sb.Append(Size+" ");
+            //if (Flavor != SodasaurusFlavor.RootBeer)
                 sb.Append(Flavor);
-            else
-                sb.Append("Root Beer");
-            sb.Append("Sodasaurus");
+            //else
+            //    sb.Append("Root Beer");
+            sb.Append(" Sodasaurus");
             return sb.ToString();
         }
     }
