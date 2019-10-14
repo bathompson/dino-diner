@@ -1,0 +1,43 @@
+﻿<Page x:Class="PointOfSale.CustomizeSide"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CustomizeSide">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label>Side</Label>
+            <Button Grid.Row="1" Click="ClickFryceritops">Fryceritops</Button>
+            <Button Grid.Row="2" Click="ClickMeteorMac">Meteor Mac &amp; Cheese</Button>
+            <Button Grid.Row="3" Click="ClickMezzorella">Mezzorella Sticks</Button>
+            <Button Grid.Row="4" Click="ClickTriceritots">Triceritots</Button>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label>Size</Label>
+            <Button Grid.Row="1" Click="ClickSmall">Small</Button>
+            <Button Grid.Row="2" Click="ClickMedium">Medium</Button>
+            <Button Grid.Row="3" Click="ClickLarge">Large</Button>
+        </Grid>
+    </Grid>
+</Page>

@@ -54,7 +54,26 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="SelectEntree.xaml.cs">
+      <DependentUpon>SelectEntree.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChooseFlavor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ComboSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeDrink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeSide.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -66,14 +85,30 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChooseFlavor.xaml.cs">
+      <DependentUpon>ChooseFlavor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComboSelection.xaml.cs">
       <DependentUpon>ComboSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeCombo.xaml.cs">
+      <DependentUpon>CustomizeCombo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeDrink.xaml.cs">
+      <DependentUpon>CustomizeDrink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeSide.xaml.cs">
+      <DependentUpon>CustomizeSide.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MenuCategorySelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectEntree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
