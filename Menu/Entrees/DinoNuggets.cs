@@ -66,6 +66,9 @@ namespace DinoDiner.Menu
             numOfNuggets++;
             Price += 0.25;
             Calories += 59;
+            NotifyPropertyChanged("Special");
+            NotifyPropertyChanged("Calories");
+            NotifyPropertyChanged("Price");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.DinoNuggets"/>.

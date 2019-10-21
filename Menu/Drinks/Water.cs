@@ -44,6 +44,8 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Description");
             }
         }
 
@@ -75,6 +77,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Water"/>.

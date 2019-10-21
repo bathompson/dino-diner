@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -10,21 +11,28 @@ namespace DinoDiner.Menu
         // Backing Variables
         private Size size;
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        public void NotifyPropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
+        private Entree entree;
         /// <summary>
         /// Gets and sets the entree
         /// </summary>
-        public Entree Entree { get; set; }
-
+        public Entree Entree { get { return entree; } set {  NotifyPropertyChanged("Entree"); NotifyPropertyChanged("Descripton"); NotifyPropertyChanged("Special"); entree = value; } }
+        private Side side;
         /// <summary>
         /// Gets and sets the side
         /// </summary>
-        public Side Side { get; set; } = new Fryceritops();
+        public Side Side { get { return side; } set { side = value; NotifyPropertyChanged("Side"); NotifyPropertyChanged("Descripton"); NotifyPropertyChanged("Special");  } }
 
+        private Drink drink;
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
-        public Drink Drink { get; set; } = new Sodasaurus();
+        public Drink Drink { get { return drink; } set {  drink=value; NotifyPropertyChanged("Drink"); NotifyPropertyChanged("Descripton"); NotifyPropertyChanged("Special"); } }
 
         /// <summary>
         /// Gets the price of the combo
@@ -59,6 +67,11 @@ namespace DinoDiner.Menu
                 size = value;
                 Drink.Size = value;
                 Side.Size = value;
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Description");
+                NotifyPropertyChanged("Special");
             }
         }
 
@@ -107,6 +120,8 @@ namespace DinoDiner.Menu
         public CretaceousCombo(Entree entree)
         {
             this.Entree = entree;
+            Drink = new Sodasaurus();
+            Side = new Fryceritops();
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.CretaceousCombo"/>.

@@ -129,6 +129,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the pickle.
@@ -136,6 +137,7 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             pickle = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the ketchup.
@@ -143,6 +145,7 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             ketchup = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the mustard.
@@ -150,6 +153,7 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             mustard = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the lettuce.
@@ -157,6 +161,7 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the tomato.
@@ -164,6 +169,7 @@ namespace DinoDiner.Menu
         public void HoldTomato()
         {
             tomato = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the onion.
@@ -171,6 +177,7 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             onion = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the mayo.
@@ -178,6 +185,7 @@ namespace DinoDiner.Menu
         public void HoldMayo()
         {
             mayo = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TRexKingBurger"/>.

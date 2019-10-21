@@ -65,6 +65,7 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the jelly.
@@ -72,6 +73,7 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.PrehistoricPBJ"/>.

@@ -47,11 +47,12 @@ namespace DinoDiner.Menu
                 return new List<string> { "Water", "Natural Flavors", "Cane Sugar"};
             }
         }
+        private SodasaurusFlavor flavor;
         /// <summary>
         /// Gets or sets the flavor.
         /// </summary>
         /// <value>The flavor.</value>
-        public SodasaurusFlavor Flavor { get; set; }
+        public SodasaurusFlavor Flavor { get { return flavor; } set { flavor = value; NotifyPropertyChanged("Description"); } }
         /// <summary>
         /// Gets or sets the size.
         /// </summary>
@@ -80,6 +81,10 @@ namespace DinoDiner.Menu
                     Price = 2.50;
                     Calories = 208;
                 }
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Description");
             }
         }
 

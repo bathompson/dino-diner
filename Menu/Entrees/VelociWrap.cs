@@ -77,6 +77,7 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             dressing = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the lettuce.
@@ -84,6 +85,7 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the cheese.
@@ -91,6 +93,7 @@ namespace DinoDiner.Menu
         public void HoldCheese()
         {
             cheese = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.VelociWrap"/>.

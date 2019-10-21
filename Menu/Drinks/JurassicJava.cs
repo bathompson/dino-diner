@@ -74,6 +74,10 @@ namespace DinoDiner.Menu
                     Price = 1.49;
                     Calories = 8;
                 }
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Description");
             }
         }
 
@@ -96,6 +100,7 @@ namespace DinoDiner.Menu
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Adds the ice.
@@ -103,6 +108,7 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             ice = true;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.JurassicJava"/>.

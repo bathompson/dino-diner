@@ -77,6 +77,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the peppers.
@@ -84,6 +85,7 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             peppers = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the onion.
@@ -91,6 +93,7 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             onions = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Brontowurst"/>.

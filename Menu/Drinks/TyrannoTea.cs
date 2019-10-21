@@ -9,11 +9,12 @@ namespace DinoDiner.Menu
     /// </summary>
     public class TyrannoTea:Drink
     {
+        private bool sweet;
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="T:DinoDiner.Menu.Drinks.TyrannoTea"/> is sweet.
         /// </summary>
         /// <value><c>true</c> if sweet; otherwise, <c>false</c>.</value>
-        public bool Sweet { get; set; }
+        public bool Sweet { get { return sweet; } set { sweet = value; NotifyPropertyChanged("Description"); } }
         /// <summary>
         /// Gets a value indicating whether this <see cref="T:DinoDiner.Menu.Drinks.TyrannoTea"/> has lemon.
         /// </summary>
@@ -70,6 +71,10 @@ namespace DinoDiner.Menu
                     Price = 1.99;
                     Calories = 32*multiplier;
                 }
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("Size");
+                NotifyPropertyChanged("Description");
             }
         }
 
@@ -103,6 +108,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.TyrannoTea"/>.

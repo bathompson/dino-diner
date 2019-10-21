@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+
 namespace DinoDiner.Menu
 {
     /// <summary>
@@ -31,6 +33,12 @@ namespace DinoDiner.Menu
         /// Determines if ice is an ingredient
         /// </summary>
         protected bool ice;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
         /// <summary>
         /// Gets a value indicating whether this <see cref="T:DinoDiner.Menu.Drinks.Drink"/> is ice.
         /// </summary>
@@ -59,6 +67,7 @@ namespace DinoDiner.Menu
         public void HoldIce()
         {
             ice = false;
+            NotifyPropertyChanged("Special");
         }
     }
 }

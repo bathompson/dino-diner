@@ -91,6 +91,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the pickle.
@@ -98,6 +99,7 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             pickle = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the ketchup.
@@ -105,6 +107,7 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             ketchup = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the mustard.
@@ -112,6 +115,7 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             mustard = false;
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.SteakosaurusBurger"/>.
