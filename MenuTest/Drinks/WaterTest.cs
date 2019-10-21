@@ -47,5 +47,35 @@ namespace MenuTest.Drinks
             w.AddLemon();
             Assert.True(w.Lemon);
         }
+        public void IndividualHoldsWork()
+        {
+            Water t = new Water();
+            t.HoldIce();
+            Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            t = new Water();
+            t.AddLemon();
+            Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+        }
+        [Theory]
+        [InlineData(false, false)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        [InlineData(true, true)]
+        public void CombosOfOptionsWork(bool holdIce, bool addLemon)
+        {
+            Water t = new Water();
+            if (holdIce)
+                t.HoldIce();
+            if (addLemon)
+                t.AddLemon();
+            if (holdIce)
+                Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            if (addLemon)
+                Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+            if (!holdIce)
+                Assert.False(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            if (!addLemon)
+                Assert.False(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+        }
     }
 }

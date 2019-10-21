@@ -45,6 +45,34 @@ namespace DinoDiner.Menu
                 return ingredient;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if(!bun)
+                {
+                    l.Add("Hold Bun");
+                }
+                if (!pickle)
+                    l.Add("Hold Pickle");
+                if (!ketchup)
+                    l.Add("Hold Ketchup");
+                if (!mustard)
+                    l.Add("Hold Mustard");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the SteakosaurusBurger class.
         /// </summary>

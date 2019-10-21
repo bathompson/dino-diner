@@ -5,7 +5,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract Class to define a Drink.
     /// </summary>
-    public abstract class Drink:IMenuItem
+    public abstract class Drink:IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets or sets the calories.
@@ -36,6 +36,16 @@ namespace DinoDiner.Menu
         /// </summary>
         /// <value><c>true</c> if ice; otherwise, <c>false</c>.</value>
         public bool Ice { get { return ice; } }
+
+        public virtual string Description 
+        { 
+            get
+            {
+                return this.ToString();
+            }
+        }
+        public abstract string[] Special { get; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:DinoDiner.Menu.Drinks.Drink"/> class.
         /// </summary>

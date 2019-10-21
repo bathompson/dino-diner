@@ -36,6 +36,30 @@ namespace DinoDiner.Menu
                 return ing;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!dressing)
+                    l.Add("Hold Dressing");
+                if (!lettuce)
+                    l.Add("Hold Lettuce");
+                if (!cheese)
+                    l.Add("Hold Cheese");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the VelociWrap class.
         /// </summary>

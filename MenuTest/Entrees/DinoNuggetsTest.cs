@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
+using System;
 
 namespace MenuTest.Entrees
 {
@@ -82,6 +83,23 @@ namespace MenuTest.Entrees
             Assert.Equal<uint>(dn.Calories, 59*8);
             dn.AddNugget();
             Assert.Equal<uint>(dn.Calories, 59*9);
+        }
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1)]
+        [InlineData(4)]
+        [InlineData(6)]
+        public void AddingNuggetsChangesTheNumberOfExtraNuggets(int extra)
+        {
+            DinoNuggets dn = new DinoNuggets();
+            for(int i =0; i< extra; i++)
+            {
+                dn.AddNugget();
+            }
+            if (extra > 0)
+                Assert.True(Array.Exists<string>(dn.Special, elem => elem.Equals($"{extra} Extra Nuggets")));
+            else
+                Assert.Empty(dn.Special);
         }
     }
 }

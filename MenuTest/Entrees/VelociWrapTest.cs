@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
+using System;
 
 namespace MenuTest.Entrees
 {
@@ -55,6 +56,50 @@ namespace MenuTest.Entrees
             VelociWrap vw = new VelociWrap();
             vw.HoldCheese();
             Assert.DoesNotContain<string>("Parmesan Cheese", vw.Ingredients);
+        }
+        [Fact]
+        public void IndividualHoldsWork()
+        {
+            VelociWrap v = new VelociWrap();
+            v.HoldCheese();
+            Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Cheese")));
+            v = new VelociWrap();
+            v.HoldDressing();
+            Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Dressing")));
+            v = new VelociWrap();
+            v.HoldLettuce();
+            Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Lettuce")));
+        }
+        [Theory]
+        [InlineData(false,false,false)]
+        [InlineData(true, false, false)]
+        [InlineData(false, true, false)]
+        [InlineData(false, false, true)]
+        [InlineData(true, true, false)]
+        [InlineData(true, false, true)]
+        [InlineData(false, true, true)]
+        [InlineData(true, true, true)]
+        public void CombosOfHoldsWork(bool holdCheese, bool holdDressing, bool holdLettuce)
+        {
+            VelociWrap v = new VelociWrap();
+            if (holdCheese)
+                v.HoldCheese();
+            if (holdDressing)
+                v.HoldDressing();
+            if (holdLettuce)
+                v.HoldLettuce();
+            if (holdCheese)
+                Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Cheese")));
+            if (holdDressing)
+                Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Dressing")));
+            if (holdLettuce)
+                Assert.True(Array.Exists<string>(v.Special, element => element.Equals("Hold Lettuce")));
+            if (!holdCheese)
+                Assert.False(Array.Exists<string>(v.Special, element => element.Equals("Hold Cheese")));
+            if (!holdDressing)
+                Assert.False(Array.Exists<string>(v.Special, element => element.Equals("Hold Dressing")));
+            if (!holdLettuce)
+                Assert.False(Array.Exists<string>(v.Special, element => element.Equals("Hold Lettuce")));
         }
     }
 }

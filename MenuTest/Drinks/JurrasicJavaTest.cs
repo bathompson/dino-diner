@@ -51,5 +51,36 @@ namespace MenuTest.Drinks
             JurassicJava j = new JurassicJava();
             Assert.Equal<List<string>>(j.Ingredients, new List<string> { "Water", "Coffee" });
         }
+        [Fact]
+        public void IndividualHoldsWork()
+        {
+            JurassicJava j = new JurassicJava();
+            j.AddIce();
+            Assert.True(Array.Exists<string>(j.Special, element => element.Equals("Add Ice")));
+            j = new JurassicJava();
+            j.LeaveRoomForCream();
+            Assert.True(Array.Exists<string>(j.Special, element => element.Equals("Leave Room For Cream")));
+        }
+        [Theory]
+        [InlineData(false,false)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        [InlineData(true, true)]
+        public void CombosOfOptionsWork(bool addIce, bool leaveRoom)
+        {
+            JurassicJava j = new JurassicJava();
+            if (addIce)
+                j.AddIce();
+            if (leaveRoom)
+                j.LeaveRoomForCream();
+            if (addIce)
+                Assert.True(Array.Exists<string>(j.Special, element => element.Equals("Add Ice")));
+            if (leaveRoom)
+                Assert.True(Array.Exists<string>(j.Special, element => element.Equals("Leave Room For Cream")));
+            if (!addIce)
+                Assert.False(Array.Exists<string>(j.Special, element => element.Equals("Add Ice")));
+            if (!leaveRoom)
+                Assert.False(Array.Exists<string>(j.Special, element => element.Equals("Leave Room For Cream")));
+        }
     }
 }

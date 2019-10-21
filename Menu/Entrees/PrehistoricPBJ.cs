@@ -29,6 +29,28 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!peanutButter)
+                    l.Add("Hold Peanut Butter");
+                if (!jelly)
+                    l.Add("Hold Jelly");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the Prehistoric PBJ class.
         /// </summary>

@@ -39,6 +39,30 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!bun)
+                    l.Add("Hold Bun");
+                if (!peppers)
+                    l.Add("Hold Peppers");
+                if (!onions)
+                    l.Add("Hold Onions");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the brontowurst class.
         /// </summary>

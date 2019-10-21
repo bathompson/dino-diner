@@ -7,7 +7,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract class to define a side
     /// </summary>
-    public abstract class Side:IMenuItem
+    public abstract class Side:IMenuItem, IOrderItem
     { 
         /// <summary>
         /// Gets and sets the price
@@ -29,5 +29,20 @@ namespace DinoDiner.Menu
         /// </summary>
         public abstract Size Size { get; set; }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                return new string[0];
+            }
+        }
     }
 }

@@ -64,5 +64,19 @@ namespace MenuTest
             Sodasaurus s = new Sodasaurus();
             Assert.Equal<List<string>>(s.Ingredients, new List<string>{"Water", "Natural Flavors", "Cane Sugar"});
         }
+
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void HoldIceWorksWithSpecial(bool holdIce)
+        {
+            Sodasaurus s = new Sodasaurus();
+            if (holdIce)
+                s.HoldIce();
+            if (holdIce)
+                Assert.True(Array.Exists(s.Special, item => item.Equals("Hold Ice")));
+            else
+                Assert.Empty(s.Special);
+        }
     }
 }

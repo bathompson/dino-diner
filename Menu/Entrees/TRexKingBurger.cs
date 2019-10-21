@@ -73,6 +73,40 @@ namespace DinoDiner.Menu
                 return ingredient;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!bun)
+                    l.Add("Hold Bun");
+                if (!pickle)
+                    l.Add("Hold Pickle");
+                if (!ketchup)
+                    l.Add("Hold Ketchup");
+                if (!mustard)
+                    l.Add("Hold Mustard");
+                if (!lettuce)
+                    l.Add("Hold Lettuce");
+                if (!tomato)
+                    l.Add("Hold Tomato");
+                if (!onion)
+                    l.Add("Hold Onion");
+                if (!mayo)
+                    l.Add("Hold Mayo");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the TRexKingBurger class.
         /// </summary>

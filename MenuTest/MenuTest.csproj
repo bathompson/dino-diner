@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Menu\Menu.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Drinks\" />
-  </ItemGroup>
-
 </Project>

@@ -46,6 +46,20 @@ namespace DinoDiner.Menu
                 size = value;
             }
         }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!ice)
+                    l.Add("Hold Ice");
+                if (Lemon)
+                    l.Add("Add Lemon");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:DinoDiner.Menu.Drinks.Water"/> class.
         /// </summary>

@@ -21,6 +21,24 @@ namespace DinoDiner.Menu
                 return new List<string> { "Chicken", "Wing Sauce" };
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the PterodactylWings class.
         /// </summary>

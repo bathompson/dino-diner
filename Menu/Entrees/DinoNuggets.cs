@@ -38,6 +38,26 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
+
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (numOfNuggets > 6)
+                    l.Add($"{numOfNuggets - 6} Extra Nuggets");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Adds a nugget.
         /// </summary>

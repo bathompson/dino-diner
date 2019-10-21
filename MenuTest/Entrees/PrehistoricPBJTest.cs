@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
+using System;
 
 namespace MenuTest.Entrees
 {
@@ -45,6 +46,37 @@ namespace MenuTest.Entrees
             PrehistoricPBJ pbj = new PrehistoricPBJ();
             pbj.HoldJelly();
             Assert.DoesNotContain<string>("Jelly", pbj.Ingredients);
+        }
+        [Fact]
+        public void CanHoldIndividualThings()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            pbj.HoldJelly();
+            Assert.True(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Jelly")));
+            pbj = new PrehistoricPBJ();
+            pbj.HoldPeanutButter();
+            Assert.True(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Peanut Butter")));
+        }
+        [Theory]
+        [InlineData(true, true)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        [InlineData(false, false)]
+        public void CanHoldCombos(bool holdJelly, bool holdPB)
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            if (holdJelly)
+                pbj.HoldJelly();
+            if (holdPB)
+                pbj.HoldPeanutButter();
+            if(holdPB)
+                Assert.True(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Peanut Butter")));
+            if(holdJelly)
+                Assert.True(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Jelly")));
+            if(!holdJelly)
+                Assert.False(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Jelly")));
+            if(!holdPB)
+                Assert.False(Array.Exists<string>(pbj.Special, item => item.Equals("Hold Peanut Butter")));
         }
     }
 

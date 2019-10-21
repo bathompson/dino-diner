@@ -99,5 +99,35 @@ namespace MenuTest.Drinks
             l.Add("Cane Sugar");
             Assert.Equal<List<string>>(l, t.Ingredients);
         }
+        public void IndividualHoldsWork()
+        {
+            TyrannoTea t = new TyrannoTea();
+            t.HoldIce();
+            Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            t = new TyrannoTea();
+            t.AddLemon();
+            Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+        }
+        [Theory]
+        [InlineData(false, false)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        [InlineData(true, true)]
+        public void CombosOfOptionsWork(bool holdIce, bool addLemon)
+        {
+            TyrannoTea t = new TyrannoTea();
+            if (holdIce)
+                t.HoldIce();
+            if (addLemon)
+                t.AddLemon();
+            if (holdIce)
+                Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            if (addLemon)
+                Assert.True(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+            if (!holdIce)
+                Assert.False(Array.Exists<string>(t.Special, element => element.Equals("Hold Ice")));
+            if (!addLemon)
+                Assert.False(Array.Exists<string>(t.Special, element => element.Equals("Add Lemon")));
+        }
     }
 }

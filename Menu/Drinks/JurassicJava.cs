@@ -76,6 +76,20 @@ namespace DinoDiner.Menu
                 }
             }
         }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (ice)
+                    l.Add("Add Ice");
+                if (RoomForCream)
+                    l.Add("Leave Room For Cream");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Leaves the room for cream.
         /// </summary>

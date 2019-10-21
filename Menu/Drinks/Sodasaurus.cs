@@ -82,6 +82,18 @@ namespace DinoDiner.Menu
                 }
             }
         }
+
+        public override string[] Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!ice)
+                    l.Add("Hold Ice");
+                return l.ToArray();
+            }
+        }
+
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:DinoDiner.Menu.Sodasaurus"/>.
         /// </summary>
