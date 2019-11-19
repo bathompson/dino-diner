@@ -13,5 +13,4 @@
     <Folder Include="Milestones\" />
     <Folder Include="Drinks\" />
   </ItemGroup>
-
 </Project>

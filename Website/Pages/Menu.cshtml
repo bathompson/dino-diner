@@ -1,0 +1,90 @@
+﻿@page
+@model Website.Pages.MenuModel
+@using DinoDiner.Menu
+@{
+	ViewData["Title"] = "Menu";
+}
+
+<h1>Menu</h1>
+
+<h2>Combos</h2>
+<ul>
+	@foreach (CretaceousCombo c in Model.m.AvailableCombos)
+	{
+		<li><div class="menu-item">
+	<p>@c.Description</p>
+	<p>Price: @c.Price</p>
+	<p>Calories: @c.Calories</p>
+	<p>Ingredients:</p>
+	<ul>
+		@foreach (string s in c.Ingredients)
+		{
+			<li>@s</li>
+		}
+
+	</ul>
+</div></li>
+	}
+</ul>
+<h2>Entrees</h2>
+<ul>
+	@foreach (Entree c in Model.m.AvailableEntrees)
+	{
+		<li>
+			<div class="menu-item">
+				<p>@c.Description</p>
+				<p>Price: @c.Price</p>
+				<p>Calories: @c.Calories</p>
+				<p>Ingredients:</p>
+				<ul>
+					@foreach (string s in c.Ingredients)
+					{
+						<li>@s</li>
+					}
+
+				</ul>
+			</div>
+		</li>
+	}
+</ul>
+<h2>Sides</h2>
+<ul>
+	@foreach (Side c in Model.m.AvailableSides)
+	{
+		<li>
+			<div class="menu-item">
+				<p>@c.Description</p>
+				<p>Price: @c.Price</p>
+				<p>Calories: @c.Calories</p>
+				<ul>
+					@foreach (string s in c.Ingredients)
+					{
+						<li>@s</li>
+					}
+
+				</ul>
+			</div>
+		</li>
+	}
+</ul>
+<h2>Drinks</h2>
+<ul>
+	@foreach (Drink c in Model.m.AvailableDrinks)
+	{
+		<li>
+			<div class="menu-item">
+				<p>@c.Description</p>
+				<p>Price: @c.Price</p>
+				<p>Calories: @c.Calories</p>
+				<p>Ingredients:</p>
+				<ul>
+					@foreach (string s in c.Ingredients)
+					{
+						<li>@s</li>
+					}
+
+				</ul>
+			</div>
+		</li>
+	}
+</ul>
