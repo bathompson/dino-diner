@@ -4,87 +4,149 @@
 @{
 	ViewData["Title"] = "Menu";
 }
+    <div class="container">
+        <div id="menu">
+            <h1>Menu</h1>
 
-<h1>Menu</h1>
+            <h2>Combos</h2>
+            <ul>
+                @foreach (IMenuItem item in Model.mi)
+                {
+                    CretaceousCombo c = item as CretaceousCombo;
+                    if (c != null)
+                    {
+                        <li>
+                            <div class="menu-item">
+                                <p>@c.Description</p>
+                                <p>Price: @c.Price</p>
+                                <p>Calories: @c.Calories</p>
+                                <p>Ingredients:</p>
+                                <ul>
+                                    @foreach (string s in c.Ingredients)
+                                    {
+                                        <li>@s</li>
+                                    }
 
-<h2>Combos</h2>
-<ul>
-	@foreach (CretaceousCombo c in Model.m.AvailableCombos)
-	{
-		<li><div class="menu-item">
-	<p>@c.Description</p>
-	<p>Price: @c.Price</p>
-	<p>Calories: @c.Calories</p>
-	<p>Ingredients:</p>
-	<ul>
-		@foreach (string s in c.Ingredients)
-		{
-			<li>@s</li>
-		}
+                                </ul>
+                                <p>@c.Side</p>
+                                <p>@c.Drink</p>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+            <h2>Entrees</h2>
+            <ul>
+                @foreach (IMenuItem item in Model.mi)
+                {
+                    Entree c = item as Entree;
+                    if (c != null)
+                    {
+                        <li>
+                            <div class="menu-item">
+                                <p>@c.Description</p>
+                                <p>Price: @c.Price</p>
+                                <p>Calories: @c.Calories</p>
+                                <p>Ingredients:</p>
+                                <ul>
+                                    @foreach (string s in c.Ingredients)
+                                    {
+                                        <li>@s</li>
+                                    }
 
-	</ul>
-</div></li>
-	}
-</ul>
-<h2>Entrees</h2>
-<ul>
-	@foreach (Entree c in Model.m.AvailableEntrees)
-	{
-		<li>
-			<div class="menu-item">
-				<p>@c.Description</p>
-				<p>Price: @c.Price</p>
-				<p>Calories: @c.Calories</p>
-				<p>Ingredients:</p>
-				<ul>
-					@foreach (string s in c.Ingredients)
-					{
-						<li>@s</li>
-					}
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+            <h2>Sides</h2>
+            <ul>
+                @foreach (IMenuItem item in Model.mi)
+                {
+                    Side c = item as Side;
+                    if (c != null)
+                    {
+                        <li>
+                            <div class="menu-item">
+                                <p>@c.Description</p>
+                                <p>Price: @c.Price</p>
+                                <p>Calories: @c.Calories</p>
+                                <ul>
+                                    @foreach (string s in c.Ingredients)
+                                    {
+                                        <li>@s</li>
+                                    }
 
-				</ul>
-			</div>
-		</li>
-	}
-</ul>
-<h2>Sides</h2>
-<ul>
-	@foreach (Side c in Model.m.AvailableSides)
-	{
-		<li>
-			<div class="menu-item">
-				<p>@c.Description</p>
-				<p>Price: @c.Price</p>
-				<p>Calories: @c.Calories</p>
-				<ul>
-					@foreach (string s in c.Ingredients)
-					{
-						<li>@s</li>
-					}
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+            <h2>Drinks</h2>
+            <ul>
+                @foreach (IMenuItem item in Model.mi)
+                {
+                    Drink c = item as Drink;
+                    if (c != null)
+                    {
+                        <li>
+                            <div class="menu-item">
+                                <p>@c.Description</p>
+                                <p>Price: @c.Price</p>
+                                <p>Calories: @c.Calories</p>
+                                <p>Ingredients:</p>
+                                <ul>
+                                    @foreach (string s in c.Ingredients)
+                                    {
+                                        <li>@s</li>
+                                    }
 
-				</ul>
-			</div>
-		</li>
-	}
-</ul>
-<h2>Drinks</h2>
-<ul>
-	@foreach (Drink c in Model.m.AvailableDrinks)
-	{
-		<li>
-			<div class="menu-item">
-				<p>@c.Description</p>
-				<p>Price: @c.Price</p>
-				<p>Calories: @c.Calories</p>
-				<p>Ingredients:</p>
-				<ul>
-					@foreach (string s in c.Ingredients)
-					{
-						<li>@s</li>
-					}
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <form method="post">
+            <input type="text" name="search" id="search" />
+            <input type="submit" value="Search" />
+            <input type="submit" name="filter" id="filter" value="Apply Filter(s)" />
+            <label>
+                <input type="checkbox" value="Combo" name="foodType" checked="@Model.foodType.Contains("Combo")" />
+                Combo
+            </label>
+            <label>
+                <input type="checkbox" value="Entree" checked="@Model.foodType.Contains("Entree")" name="foodType" />
+                Entree
+            </label>
+            <label>
+                <input type="checkbox" value="Side" checked="@Model.foodType.Contains("Side")" name="foodType" />
+                Side
+            </label>
+            <label>
+                <input type="checkbox" value="Drink" checked="@Model.foodType.Contains("Drink")" name="foodType" />
+                Drink
+            </label>
+            <label>
+                Minimum Price
+                <input type="number" id="minimum-price" name="minimumPrice" />
 
-				</ul>
-			</div>
-		</li>
-	}
-</ul>
+            </label>
+            <label>
+                Maximum Price
+                <input type="number" id="maximum-price" name="maximumPrice" />
+
+            </label>
+
+            @foreach (string s in Model.m.PossibleIngredients)
+            {
+                <label>
+                    <input type="checkbox" value="@s" name="ingredients" checked="@Model.ingredients.Contains(s)" />
+                    @s
+                </label>
+            }
+        </form>
+    </div>

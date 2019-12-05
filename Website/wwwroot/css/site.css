@@ -17,3 +17,18 @@ body {
 	width:20%;
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    width:30%
+}
+#menu{
+    width:100%
+}
