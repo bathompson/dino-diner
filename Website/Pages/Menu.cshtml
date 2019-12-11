@@ -17,9 +17,30 @@
                     {
                         <li>
                             <div class="menu-item">
-                                <p>@c.Description</p>
-                                <p>Price: @c.Price</p>
-                                <p>Calories: @c.Calories</p>
+                                <table border="1">
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Medium;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Large;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                </table>
                                 <p>Ingredients:</p>
                                 <ul>
                                     @foreach (string s in c.Ingredients)
@@ -72,6 +93,30 @@
                                 <p>@c.Description</p>
                                 <p>Price: @c.Price</p>
                                 <p>Calories: @c.Calories</p>
+                                <table border="1">
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Medium;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Large;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                </table>
                                 <ul>
                                     @foreach (string s in c.Ingredients)
                                     {
@@ -96,6 +141,30 @@
                                 <p>@c.Description</p>
                                 <p>Price: @c.Price</p>
                                 <p>Calories: @c.Calories</p>
+                                <table border="1">
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Medium;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                    <tr>
+                                        @c.Size=Large;
+                                        <th>@c.Size</th>
+                                        <th>@c.Price</th>
+                                        <th>@c.Calories</th>
+                                    </tr>
+                                </table>
                                 <p>Ingredients:</p>
                                 <ul>
                                     @foreach (string s in c.Ingredients)
